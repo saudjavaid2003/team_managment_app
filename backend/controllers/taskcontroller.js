@@ -170,7 +170,7 @@ const updateTaskStatus = async (req, res) => {
 
     if (!isAssigned && req.user.role !== "admin") {
       return res.status(403).json({
-        message: "You are not auhorized to update this task status",
+        message: "You are not aurized to update this task status",
       });
     }
 
