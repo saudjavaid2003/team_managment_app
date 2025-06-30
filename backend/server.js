@@ -7,6 +7,9 @@ const connectDB = require("./config/db");
 const authRoutes = require("./routes/authroutes");
 const userRoutes = require("./routes/userRoutes");
 const taskroutes= require("./routes/taskroutes");
+const reportRoutes = require("./routes/reportroutes");
+
+
 const app = express();
 
 // Connect to DB
@@ -27,6 +30,8 @@ app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/tasks",taskroutes)
+app.use("/api/tasks",reportRoutes);
+
 
 app.get("/api/auth/test", (req, res) => res.json({ msg: "Route works!" }));
 

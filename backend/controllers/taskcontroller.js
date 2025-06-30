@@ -141,13 +141,11 @@ const deleteTask=async (req,res)=>{
     res.status(200).json({
       message:"your task has been deleted successfully"
     })
-
   }
   catch(error){
     res.status(500).json({
       message:"any internet server error has been occured"
     })
-
   }
 }
 
