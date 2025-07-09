@@ -405,7 +405,7 @@ const getUserDashboardData = async (req, res) => {
 
   } catch(error) {
     res.status(500).json({
-      message: "Internal server error",
+      message: "Internal server errr",
       error: error.message
     });
   }
